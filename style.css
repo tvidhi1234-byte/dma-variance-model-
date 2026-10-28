@@ -1,0 +1,182 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f5fc;
+  color: #302b45;
+  line-height: 1.6;
+}
+
+.hero {
+  text-align: center;
+  padding: 45px 20px;
+  background: linear-gradient(135deg, #eee7ff, #ffeaf2);
+}
+
+.hero h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 10px 0;
+}
+
+.hero p {
+  color: #716a83;
+}
+
+main {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px #40306012;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ded8ee;
+  border-radius: 9px;
+  resize: vertical;
+  font: inherit;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  background: #7564c7;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5948a8;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.results > div {
+  padding: 15px;
+  border-radius: 12px;
+  background: #f5f1ff;
+  overflow-wrap: anywhere;
+}
+
+.results h3 {
+  font-size: 15px;
+}
+
+.results p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.chart {
+  min-height: 190px;
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  gap: 15px;
+  padding-top: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.bar-group {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.bar {
+  width: 60%;
+  max-width: 75px;
+  min-height: 4px;
+  border-radius: 8px 8px 0 0;
+}
+
+.bar-value {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.bar-label {
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  color: #7564c7;
+}
+
+.note {
+  padding: 12px;
+  background: #f8f4ff;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+#error {
+  color: #bd3457;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #716a83;
+  font-size: 13px;
+}
+
+@media (max-width: 550px) {
+  .card {
+    padding: 17px;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+  }
+
+  th, td {
+    font-size: 13px;
+  }
+}
