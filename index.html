@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANOVA & Variance Test Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p>STATISTICS • DATA • DECISIONS</p>
+    <h1>ANOVA & Variance Test</h1>
+    <p>Compare average marks and variability across three teaching methods.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Enter Student Marks</h2>
+      <p>Enter numbers separated by commas.</p>
+
+      <label>Method A</label>
+      <textarea id="groupA">65,70,68,72,66</textarea>
+
+      <label>Method B</label>
+      <textarea id="groupB">75,78,74,80,77</textarea>
+
+      <label>Method C</label>
+      <textarea id="groupC">85,82,88,86,84</textarea>
+
+      <button id="analyzeBtn">Analyze Groups</button>
+      <p id="error"></p>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+      <div class="results">
+        <div>
+          <h3>ANOVA p-value</h3>
+          <p id="anovaP">--</p>
+          <span id="anovaStatus"></span>
+        </div>
+        <div>
+          <h3>Levene's Test p-value</h3>
+          <p id="leveneP">--</p>
+          <span id="leveneStatus"></span>
+        </div>
+      </div>
+
+      <h3>Average Marks</h3>
+      <div id="chart" class="chart"></div>
+
+      <h3>Group Summary</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Students</th>
+              <th>Mean</th>
+              <th>Variance</th>
+            </tr>
+          </thead>
+          <tbody id="summaryBody"></tbody>
+        </table>
+      </div>
+
+      <h3>Interpretation</h3>
+      <p id="anovaExplanation"></p>
+      <p id="leveneExplanation"></p>
+      <p class="note">
+        A p-value below 0.05 is commonly treated as statistically significant.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Key Concept</h2>
+      <p><strong>ANOVA:</strong> Compares the means of three or more groups.</p>
+      <p><strong>Variance Test:</strong> Checks whether groups have similar variability.</p>
+    </section>
+  </main>
+
+  <footer>ANOVA & Variance Test Simulator | Statistics Mini Project</footer>
+  <script src="script.js"></script>
+</body>
+</html>
